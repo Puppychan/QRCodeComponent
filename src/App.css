@@ -1,0 +1,61 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+
+  --clr-background: var(--light-gray);
+  --clr-background-card: var(--white);
+  --clr-txt-header: var(--dark-blue);
+  --clr-txt-p: var(--grayish-blue);
+
+}
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--clr-background);
+  padding: 3em 0;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  padding: 1.5em 1.2em;
+  width: 85%;
+  border-radius: 15px;
+  background-color: var(--clr-background-card);
+}
+.card h1 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--clr-txt-header);
+  font-weight: 700;
+}
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--clr-txt-p);
+  font-weight: 400;
+}
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+@media screen and (min-width: 768px){
+  .card {
+    width: min(400px, 40%);
+  }
+
+}
